@@ -2,13 +2,25 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/svg+xml" href="/images/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hello Vanilla App</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
-
+<style>
+  body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  </style>
 <body>
   <div id="app">
     <div>
@@ -19,11 +31,19 @@
       <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started" target="_blank">
         <img src="images/css.svg" class="logo presentation" alt="CSS logo" />
       </a>
-      <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+      <a {;
+      }
+      href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
         target="_blank">
         <img src="images/javascript.svg" class="logo behaviour" alt="JavaScript logo" target="_blank" />
+      
       </a>
-      <h1>Hello Vanilla</h1>
+      <h2>Toggle Light/Dark Mode</h2>
+<p>Click the button to toggle between dark and light mode for this page.</p>
+<p></p>
+<button onclick="myFunction()">Toggle dark mode</button>
+      
+<h1>Hello Vanilla</h1>
       <div class="card">
         <button id="counter" type="button"></button>
       </div>
@@ -32,7 +52,10 @@
       </p>
     </div>
   </div>
-  <script type="module" src="script/counter.js"></script>
+  <script>
+  function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }</script>
 </body>
-
 </html>
